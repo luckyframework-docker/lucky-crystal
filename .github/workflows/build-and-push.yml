@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Get the version
         id: get_version
-        run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
+        run: echo ::set-env name=VERSION::${GITHUB_REF#refs/tags/}
       - uses: docker/build-push-action@v1.1.0
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
