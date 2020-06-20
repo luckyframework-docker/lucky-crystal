@@ -1,4 +1,0 @@
-#!/bin/bash
-set -e
-docker build -t luckyhasuradocker/lucky-crystal:l0.22.0c0.35.0-alpine .
-docker push luckyhasuradocker/lucky-crystal:l0.22.0c0.35.0-alpine
