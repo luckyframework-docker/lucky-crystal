@@ -1,4 +1,4 @@
-FROM crystallang/crystal:0.35.0-alpine-build as build-image
+FROM crystallang/crystal:0.35.1-alpine-build as build-image
 
 ENV MUSL_LOCPATH /usr/share/i18n/locales/musl
 ENV MUSL_LOCALE_DEPS cmake make musl-dev gcc gettext-dev libintl
@@ -19,7 +19,7 @@ RUN git clone https://github.com/luckyframework/lucky_cli && \
 WORKDIR /usr/local/lucky_cli
 RUN crystal build src/lucky.cr -o /usr/local/bin/lucky
 
-FROM crystallang/crystal:0.35.0-alpine as runtime-image
+FROM crystallang/crystal:0.35.1-alpine as runtime-image
 
 RUN apk add --no-cache --update postgresql-client
 COPY --from=build-image /usr/local/bin/lucky /usr/local/bin/lucky
