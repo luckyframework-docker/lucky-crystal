@@ -11,6 +11,12 @@ Example:
 
 `l0.22.0c0.35.0-alpine`
 
+## Dockerhub
+
+This image gets built and pushed to docker hub whenever the repo is tagged:
+
+https://hub.docker.com/repository/docker/luckyframeworkdocker/lucky-crystal
+
 ## Future Ideas
 
 * Add a default non-root user like Node does?
