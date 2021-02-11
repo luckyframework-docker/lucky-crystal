@@ -1,4 +1,4 @@
-FROM crystallang/crystal:0.35.1-alpine-build as build-image
+FROM crystallang/crystal:0.36.1-alpine-build as build-image
 
 ENV MUSL_LOCPATH /usr/share/i18n/locales/musl
 ENV MUSL_LOCALE_DEPS cmake make musl-dev gcc gettext-dev libintl
